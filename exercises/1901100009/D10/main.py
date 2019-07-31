@@ -10,7 +10,7 @@ logging.basicConfig(
 def load_file():
 
 
-    file_path = path.join(path.dirname(path.abspath(__file__)),'./tang300.json')
+    file_path = path.join(path.dirname(path.abspath(__file__)),'./gogogo.txt')
     print ('当前文件路径：',__file__ , '/n读取文件路径：',file_path)
 
 
@@ -30,8 +30,8 @@ def main():
     try:
         data = load_file()
         logging.info(data[0])
-        poems = merge_poems(json.loads(data))
-        logging.info('result ==> %s' , stats_word.stats_text_cn(poems,100))
+        #poems = merge_poems(json.loads(data))
+        logging.info('result ==> %s' , stats_word.stats_text_cn(data,100))
     except Exception as e:
         #print ('text_logger=>',e)
         logging.exception(e)
